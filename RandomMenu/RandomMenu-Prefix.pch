@@ -1,0 +1,18 @@
+//
+//  RandomMenu-Prefix.pch
+//  RandomMenu
+//
+//  Created by ZJ-Jie on 2017/5/27.
+//  Copyright © 2017年 Jie. All rights reserved.
+//
+
+#ifndef RandomMenu_Prefix_pch
+#define RandomMenu_Prefix_pch
+
+#import "QSCookAPIManage.h"
+#import "NSError+QSMessage.h"
+#import "UIView+HUD.h"
+#import "QSRandomMenuMacro.h"
+
+
+#endif /* RandomMenu_Prefix_pch */
