@@ -59,7 +59,7 @@
 		1820B86C1ED942DB0044BA3F /* RandomMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomMenu-Prefix.pch"; sourceTree = "<group>"; };
 		1820B86D1ED943EE0044BA3F /* QSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSClient.h; sourceTree = "<group>"; };
 		1820B86E1ED943EE0044BA3F /* QSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSClient.m; sourceTree = "<group>"; };
-		1820B8751ED955460044BA3F /* QSAppKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSAppKey.h; sourceTree = "<group>"; };
+		182EC6FE1EDECFCF002640D1 /* QSAppKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSAppKey.h; sourceTree = "<group>"; };
 		18F6F23D1EDEAA3C00C1C00C /* QSRandomMenuMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSRandomMenuMacro.h; sourceTree = "<group>"; };
 		18F6F23E1EDEAA4B00C1C00C /* NSError+QSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+QSMessage.h"; path = "../Client/NSError+QSMessage.h"; sourceTree = "<group>"; };
 		18F6F23F1EDEAA4B00C1C00C /* NSError+QSMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSError+QSMessage.m"; path = "../Client/NSError+QSMessage.m"; sourceTree = "<group>"; };
@@ -175,7 +175,7 @@
 				1820B86E1ED943EE0044BA3F /* QSClient.m */,
 				18F6F2451EDEAC2700C1C00C /* QSCookAPIManage.h */,
 				18F6F2461EDEAC2700C1C00C /* QSCookAPIManage.m */,
-				1820B8751ED955460044BA3F /* QSAppKey.h */,
+				182EC6FE1EDECFCF002640D1 /* QSAppKey.h */,
 				18F6F2481EDEAE0C00C1C00C /* QSAPIURL.h */,
 			);
 			path = Client;
@@ -379,7 +379,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FB25BFBE7B2C0F5B56D3D4B5 /* [CP] Embed Pods Frameworks */ = {
