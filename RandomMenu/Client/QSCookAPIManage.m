@@ -10,6 +10,8 @@
 #import "QSAPIURL.h"
 #import "QSClient.h"
 
+static NSString * const kMaxPageNumber = @"10";
+
 @implementation QSCookAPIManage
 
 + (instancetype)sharedManage {
@@ -22,8 +24,8 @@
 }
 
 - (NSURLSessionDataTask *)searchMenuWithDishName:(NSString *)name pageNumber:(NSString *)page block:(void (^)(id data, NSError *error))block {
-    NSString *pages = page.length ? @"0":[NSString stringWithFormat:@"%ld",[page integerValue] * 10];
-    return [NetAPI post:KNetPath_Menus withParams:@{@"menu":name,@"pn":pages} andBlock:^(id data, NSError *error) {
+    NSString *pages = page.length ? @"0":[NSString stringWithFormat:@"%ld",[page integerValue] * [kMaxPageNumber integerValue]];
+    return [NetAPI post:KNetPath_Menus withParams:@{@"menu":name,@"pn":pages,@"rn":kMaxPageNumber} andBlock:^(id data, NSError *error) {
         //TODO:处理数据
         
         [self safeBlockWithData:data error:error block:block];
@@ -43,8 +45,8 @@
 }
 
 - (NSURLSessionDataTask *)searchMenuWithMenuIndex:(NSInteger)index pageNumber:(NSString *)page block:(void (^)(id data, NSError *error))block {
-    NSString *pages = page.length ? @"0":[NSString stringWithFormat:@"%ld",[page integerValue] * 10];
-    return [NetAPI post:KNetPath_MenusWithIndex withParams:@{@"cid":@(index),@"pn":pages} andBlock:^(id data, NSError *error) {
+    NSString *pages = page.length ? @"0":[NSString stringWithFormat:@"%ld",[page integerValue] * [kMaxPageNumber integerValue]];
+    return [NetAPI post:KNetPath_MenusWithIndex withParams:@{@"cid":@(index),@"pn":pages,@"rn":kMaxPageNumber} andBlock:^(id data, NSError *error) {
         //TODO:处理数据
         
         [self safeBlockWithData:data error:error block:block];

@@ -48,7 +48,9 @@ static NSString* const kBaseURL = @"http://apis.juhe.cn/cook";
         
         /** 复杂的参数类型 需要使用 json 传值 - 设置请求内容的类型 */
         
-        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        
+//        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
         
