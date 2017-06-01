@@ -16,9 +16,11 @@
 		1820B84F1ED940090044BA3F /* RandomMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820B84E1ED940090044BA3F /* RandomMenuTests.m */; };
 		1820B85A1ED940090044BA3F /* RandomMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820B8591ED940090044BA3F /* RandomMenuUITests.m */; };
 		1820B86F1ED943EE0044BA3F /* QSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1820B86E1ED943EE0044BA3F /* QSClient.m */; };
+		1827985C1EDFAD23007F2299 /* QSParentInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1827985B1EDFAD23007F2299 /* QSParentInfo.m */; };
 		18F6F2401EDEAA4B00C1C00C /* NSError+QSMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F23F1EDEAA4B00C1C00C /* NSError+QSMessage.m */; };
 		18F6F2441EDEAB5900C1C00C /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F2431EDEAB5900C1C00C /* UIView+HUD.m */; };
 		18F6F2471EDEAC2700C1C00C /* QSCookAPIManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F2461EDEAC2700C1C00C /* QSCookAPIManage.m */; };
+		18F6F3051EDF02B500C1C00C /* QSMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F6F3041EDF02B500C1C00C /* QSMenuModel.m */; };
 		4EEAD7A0E91997ECE3A38C4F /* libPods-RandomMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4009909EFC54DA3BA5E8E62 /* libPods-RandomMenu.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		1820B86C1ED942DB0044BA3F /* RandomMenu-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomMenu-Prefix.pch"; sourceTree = "<group>"; };
 		1820B86D1ED943EE0044BA3F /* QSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSClient.h; sourceTree = "<group>"; };
 		1820B86E1ED943EE0044BA3F /* QSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSClient.m; sourceTree = "<group>"; };
+		1827985A1EDFAD23007F2299 /* QSParentInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSParentInfo.h; sourceTree = "<group>"; };
+		1827985B1EDFAD23007F2299 /* QSParentInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSParentInfo.m; sourceTree = "<group>"; };
 		182EC6FE1EDECFCF002640D1 /* QSAppKey.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSAppKey.h; sourceTree = "<group>"; };
 		18F6F23D1EDEAA3C00C1C00C /* QSRandomMenuMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSRandomMenuMacro.h; sourceTree = "<group>"; };
 		18F6F23E1EDEAA4B00C1C00C /* NSError+QSMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSError+QSMessage.h"; path = "../Client/NSError+QSMessage.h"; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		18F6F2451EDEAC2700C1C00C /* QSCookAPIManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCookAPIManage.h; sourceTree = "<group>"; };
 		18F6F2461EDEAC2700C1C00C /* QSCookAPIManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSCookAPIManage.m; sourceTree = "<group>"; };
 		18F6F2481EDEAE0C00C1C00C /* QSAPIURL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QSAPIURL.h; sourceTree = "<group>"; };
+		18F6F3031EDF02B500C1C00C /* QSMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMenuModel.h; sourceTree = "<group>"; };
+		18F6F3041EDF02B500C1C00C /* QSMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMenuModel.m; sourceTree = "<group>"; };
 		6A78A59780C755ECA3C00282 /* Pods-RandomMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMenu/Pods-RandomMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		DDBF7C546AA6D74E0134B168 /* Pods-RandomMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-RandomMenu/Pods-RandomMenu.release.xcconfig"; sourceTree = "<group>"; };
 		F4009909EFC54DA3BA5E8E62 /* libPods-RandomMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RandomMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +190,10 @@
 		1820B8791ED961C20044BA3F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				18F6F3031EDF02B500C1C00C /* QSMenuModel.h */,
+				18F6F3041EDF02B500C1C00C /* QSMenuModel.m */,
+				1827985A1EDFAD23007F2299 /* QSParentInfo.h */,
+				1827985B1EDFAD23007F2299 /* QSParentInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,9 +416,11 @@
 			files = (
 				18F6F2471EDEAC2700C1C00C /* QSCookAPIManage.m in Sources */,
 				18F6F2441EDEAB5900C1C00C /* UIView+HUD.m in Sources */,
+				18F6F3051EDF02B500C1C00C /* QSMenuModel.m in Sources */,
 				1820B86F1ED943EE0044BA3F /* QSClient.m in Sources */,
 				1820B83C1ED940090044BA3F /* ViewController.m in Sources */,
 				18F6F2401EDEAA4B00C1C00C /* NSError+QSMessage.m in Sources */,
+				1827985C1EDFAD23007F2299 /* QSParentInfo.m in Sources */,
 				1820B8391ED940090044BA3F /* AppDelegate.m in Sources */,
 				1820B8361ED940090044BA3F /* main.m in Sources */,
 			);

@@ -22,22 +22,23 @@
 - (IBAction)touch:(UIButton *)sender {
     switch (sender.tag) {
         case 1:
-            [Net searchMenuWithDishName:@"红烧肉" pageNumber:nil block:^(id data, NSError *error) {
-                
+            [Net searchMenuWithDishName:@"红烧肉" pageNumber:nil block:^(QSMenuInfo *data, NSError *error) {
+                QSMenuModel *model = [data.data firstObject];
+                NSLog(@"%@",model);
             }];
             break;
         case 2:
-            [Net searchMenuWithMenuCategoryId:0 block:^(id data, NSError *error) {
+            [Net searchMenuWithMenuCategoryId:0 block:^( NSArray<QSParentInfo *> *data, NSError *error) {
                 
             }];
             break;
         case 3:
-            [Net searchMenuWithMenuIndex:10005 pageNumber:nil block:^(id data, NSError *error) {
+            [Net searchMenuWithMenuIndex:20 pageNumber:nil block:^(QSMenuInfo *data, NSError *error) {
                 
             }];
             break;
         case 4:
-            [Net searchMenuWithMenuId:2 block:^(id data, NSError *error) {
+            [Net searchMenuWithMenuId:2 block:^(QSMenuInfo *data, NSError *error) {
                 
             }];
             break;

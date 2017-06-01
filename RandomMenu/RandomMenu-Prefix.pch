@@ -10,9 +10,17 @@
 #define RandomMenu_Prefix_pch
 
 #import "QSCookAPIManage.h"
+
+//category
 #import "NSError+QSMessage.h"
 #import "UIView+HUD.h"
+
+//macro
 #import "QSRandomMenuMacro.h"
+
+//model
+#import "QSMenuModel.h"
+#import "QSParentInfo.h"
 
 
 #endif /* RandomMenu_Prefix_pch */

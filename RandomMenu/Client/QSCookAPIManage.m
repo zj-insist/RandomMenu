@@ -9,6 +9,7 @@
 #import "QSCookAPIManage.h"
 #import "QSAPIURL.h"
 #import "QSClient.h"
+#import <YYKit.h>
 
 static NSString * const kMaxPageNumber = @"10";
 
@@ -26,9 +27,10 @@ static NSString * const kMaxPageNumber = @"10";
 - (NSURLSessionDataTask *)searchMenuWithDishName:(NSString *)name pageNumber:(NSString *)page block:(void (^)(id data, NSError *error))block {
     NSString *pages = page.length ? @"0":[NSString stringWithFormat:@"%ld",[page integerValue] * [kMaxPageNumber integerValue]];
     return [NetAPI post:KNetPath_Menus withParams:@{@"menu":name,@"pn":pages,@"rn":kMaxPageNumber} andBlock:^(id data, NSError *error) {
-        //TODO:处理数据
         
-        [self safeBlockWithData:data error:error block:block];
+        QSMenuInfo *menuInfo = [QSMenuInfo modelWithJSON:data[@"result"]];
+        
+        [self safeBlockWithData:menuInfo error:error block:block];
     }];
 }
 
@@ -38,26 +40,28 @@ static NSString * const kMaxPageNumber = @"10";
         param = @{@"parentid":@(CategoryId)};
     }
     return [NetAPI post:KNetPath_MenusCategory withParams:param andBlock:^(id data, NSError *error) {
-        //TODO:处理数据
         
-        [self safeBlockWithData:data error:error block:block];
+        NSArray<QSParentInfo *> *parents = [NSArray modelArrayWithClass:[QSParentInfo class] json:data[@"result"]];
+        
+        [self safeBlockWithData:parents error:error block:block];
     }];
 }
 
 - (NSURLSessionDataTask *)searchMenuWithMenuIndex:(NSInteger)index pageNumber:(NSString *)page block:(void (^)(id data, NSError *error))block {
     NSString *pages = page.length ? @"0":[NSString stringWithFormat:@"%ld",[page integerValue] * [kMaxPageNumber integerValue]];
     return [NetAPI post:KNetPath_MenusWithIndex withParams:@{@"cid":@(index),@"pn":pages,@"rn":kMaxPageNumber} andBlock:^(id data, NSError *error) {
-        //TODO:处理数据
         
-        [self safeBlockWithData:data error:error block:block];
+        QSMenuInfo *menuInfo = [QSMenuInfo modelWithJSON:data[@"result"]];
+        
+        [self safeBlockWithData:menuInfo error:error block:block];
     }];
 }
 
 - (NSURLSessionDataTask *)searchMenuWithMenuId:(NSInteger)menuId block:(void (^)(id data, NSError *error))block {
     return [NetAPI post:KNetPath_MenusID withParams:@{@"id":@(menuId)} andBlock:^(id data, NSError *error) {
         //TODO:处理数据
-        
-        [self safeBlockWithData:data error:error block:block];
+        QSMenuInfo *menuInfo = [QSMenuInfo modelWithJSON:data[@"result"]];
+        [self safeBlockWithData:menuInfo error:error block:block];
     }];
 }
 
